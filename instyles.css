@@ -1,0 +1,283 @@
+/* CSS Design For Invoice Tracker HTML */
+/* Reset some default browser styles */
+/* CSS Design For Invoice Tracker HTML */
+/* Reset some default browser styles */
+/* Reset some default browser styles */
+/* Reset the default margin and padding */
+/* Body styling with background gradient and full-screen layout */
+body {
+    background-image: radial-gradient(#3540d1, #ac1cb1);
+    background-size: 1000px 1000px;
+    animation: bg 2s ease infinite;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Container for the dashboard */
+.container {
+    width: 100%;
+    max-width: 1500px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(50px);
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(10, 4, 0, 0.25);
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+h1, h2, h3 {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+/* Button styling with gradient effect */
+button {
+    background-image: radial-gradient(#010b96, #2803ad);
+    background-size: 1000px 1000px;
+    animation: bg 2s ease infinite;
+    color: rgb(230, 215, 215);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 100px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #829db9;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Input fields (email, password, etc.) */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 16px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #007BFF;
+    transform: scale(1.05);
+}
+
+/* Login section */
+#loginSection,
+#dashboard {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Dashboard Styling */
+#dashboard {
+    display: none;
+    padding-top: 30px;
+}
+
+#dashboard h2 {
+    margin-bottom: 20px;
+}
+
+/* Notifications section */
+#notifications {
+    background-color: #81858f;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+#notifications h3 {
+    margin-bottom: 10px;
+}
+
+#notificationList {
+    list-style: none;
+}
+
+#notificationList li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+/* Section for Order, Purchase, and Billing */
+#orderSection,
+#purchaseSection,
+#billingSection {
+    margin-bottom: 30px;
+}
+
+.section {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(20, 14, 14, 0.1);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #c90e0ee5;
+}
+
+th {
+    background-color: #1e1adb;
+    color: rgb(231, 221, 221);
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Order Section Form (Inputs and Button) */
+#orderSection select,
+#orderSection input {
+    width: 48%;
+    margin-right: 4%;
+}
+
+#orderSection input[type="text"] {
+    width: 48%;
+}
+
+#orderSection button {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+#orderSection button:hover {
+    transform: scale(1.1);
+}
+
+/* Search Bar Styling */
+#searchBar {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Map Section Styling */
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+/* File Upload Section Styling */
+#fileUploadSection {
+    margin-top: 20px;
+}
+
+#fileUploadSection input[type="file"] {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+#fileUploadSection input[type="file"]:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    #orderSection select,
+    #orderSection input {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #orderSection input[type="text"] {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    #map {
+        height: 250px;
+    }
+
+    #fileUploadSection input[type="file"] {
+        width: 100%;
+    }
+}
